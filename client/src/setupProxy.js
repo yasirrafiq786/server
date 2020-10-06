@@ -3,9 +3,7 @@ module.exports = function (app) {
   app.use(
     ['/api', '/auth/google'],
     createProxyMiddleware({
-      target: 'http://127.0.0.1:5000',
-      secure: false,
-      changeOrigin: true,
+      target: 'http://localhost:5000',
     })
   );
 };
