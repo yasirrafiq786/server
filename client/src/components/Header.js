@@ -11,7 +11,9 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <a href="/auth/google">Login With Google</a>
+            <a href="/auth/google" className="waves-effect waves-light btn red">
+              Login With Google<i class="material-icons right">send</i>
+            </a>
           </li>
         );
       default:
@@ -34,11 +36,21 @@ class Header extends Component {
   render() {
     return (
       <nav>
-        <div className="nav-wrapper">
+        <div
+          className="nav-wrapper blue darken-4"
+          style={{fontFamily: 'Poppins'}}
+        >
           <Link
             to={this.props.auth ? '/surveys' : '/'}
-            className="left brand-logo"
+            className="left brand-logo hide-on-small-only"
+            style={{fontFamily: 'Pacifico'}}
           >
+            <i
+              className="material-icons"
+              style={{marginRight: '2px', fontSize: '40px'}}
+            >
+              assignment
+            </i>
             Emaily
           </Link>
           <ul className="right">{this.renderContent()}</ul>
